@@ -1,0 +1,55 @@
+.todas{
+	background-color:pink;
+	border:solid 2px aqua;  /* tipo da borda, tamanho e cor */
+	width: 80%;
+	height:80%;
+	/*display: flex;  /* esse cara muda a posição do que ta dentro das divs */ 
+	/*justify-content: center;
+	align-items: center; */
+	transition: width 1s, height 1s, border-radius 2s;
+	border-radius:20px;
+	transition-timing-function: ease-in-out;
+}
+
+.container{
+	display: grid;
+	grid-template-columns: repeat(2,50%);
+	grid-template-rows: repeat(2,50%);
+	width: 100%;
+	height:100%;
+	background-color:black; /* pra isso funcionar, tenho que colocar a mesma coisa >>>(width, height) no .todas só que reduzido, pra poder enxergar o background */
+	justify-items:center; /* alinha no centro pela horizontal */
+	align-items:center; /* alinha no centro pela vertical */
+	font-family: 'Montserrat Alternates', sans-serif;
+	color: white;
+	text-align: center;
+	font-size: 2em;
+	font-weight: italic; /* ?? */
+	/* place-items:center; ( alinha horizontalmente e verticalmente ao mesmo tempo )
+	position:relative; */
+}
+
+#serie-1{
+	background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQdUHPMbcl8gQyM6Wg4MOmLXlQLCIyNtRisJ_-n40nXQlNRbFD3);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+#serie-2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.todas:hover{
+	width: 100%;
+	height:100%;
+}
+
+@media(max-width:600px){
+	.container{
+		display:flex;
+	    flex-direction: column;
+	    justify-content:flex-start;
+	}
+}
